@@ -46,7 +46,7 @@ const compareJsons = (a, b) => {
     writeToModal("<br><span class='bold text-xl'>Matches: </span><br>")
     a_keys.forEach(x => {
         if(!b_json[x]) {
-            console.log('b missing %s', x);
+            // console.log('b missing %s', x);
             misses += `<span style="color:red;">${x} missing</span><br>`
             missKeys.push(x);
             missCount++;
@@ -56,7 +56,7 @@ const compareJsons = (a, b) => {
                 matches += `${x} <span style="color: lawngreen">&check;</span> <br>`;
                 matchCount++;
             } else {
-                console.log("%c %s doesn't match", "color:red;", x);
+                // console.log("%c %s doesn't match", "color:red;", x);
                 // misses += `<span style="color:red;">${x} doesn't match</span><br>`;
                 missKeys.push(x);
                 missCount++;
