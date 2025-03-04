@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="dist/thumbmark.umd.js"></script>
+    <title>thumbmark diff</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+<h1 class="text-3xl font-bold p-3">
+    Test Diff
+</h1>
+<div>
+    <select id="files" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Choose a file</option>
+        <option value="nick.json">nick</option>
+        <option value="jaws_linux.json">jaws (linux)</option>
+        <option value="jaws_windows.json">jaws (windows)</option>
+        <option value="bem.json">bem</option>
+        <option value="bem_phone.json">bem (phone)</option>
+        <option value="bem_firefox.json">bem (firefox)</option>
+    </select>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="myBtn">See diff</button>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="closeButton" onclick="closeModal()">&times;</span>
+        <div id="modalContent">
+        </div>
+    </div>
+
+</div>
+
+<div class="two-columns-grid">
+    <div>
+        <h1 class="text-2xl bold underline" id="fileName"></h1>
+        <pre id="first"></pre>
+    </div>
+    <div>
+        <h1 class="text-2xl bold underline">You (detected)</h1>
+        <pre id="detected"></pre>
+    </div>
+</div>
+</div>
+<script src="compare.js"></script>
+</body>
+
+</html>
