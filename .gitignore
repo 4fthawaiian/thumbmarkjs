@@ -3,4 +3,12 @@ build
 testpage
 .env
 dist
+.ideathumb.tgz
 .idea
+bem_firefox.json
+bem.json
+bem_phone.json
+jaws_linux.json
+jaws_windows.json
+nick.json
+thumb.tgz

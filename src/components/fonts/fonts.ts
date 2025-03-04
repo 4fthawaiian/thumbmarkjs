@@ -141,5 +141,5 @@ function measureSingleFont(ctx: CanvasRenderingContext2D | null, font: string): 
     return ctx.measureText(text).width;
 }
 
-if (getBrowser().name != 'Firefox')
-    includeComponent('fonts', getFontMetrics);
+// if (getBrowser().name != 'Firefox')
+includeComponent('fonts', getFontMetrics);
